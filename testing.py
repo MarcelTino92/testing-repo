@@ -1,14 +1,23 @@
+#!/usr/bin/env python
+# coding: utf-8
+# In[ ]:
 import streamlit as st
-import requests
-data = {"username": 1, "password": 2,"question":3}
-url = f"https://programmingtraining.sawtoothsoftware.com/CTDEMOCHI_V1/cgi-bin/ciwweb.pl?studyname=CTDEMOCHI_V1&sys_skipto=D1PostText&transaction_id=5&CT-1&hid_pagenum=1&hid_link=1&hid_javascript=1&hid_screenwidth=1488/embed=True"
-response = requests.get(url, params=data)
+# import webbrowser as wb
+from urllib.parse import urlencode
 
-res_id= f"{st.query_params.respondent}"
-username=f"{st.query_params.username}"
-password=f"{st.query_params.password}"
-question=f"{st.query_params.question}"
-st.write(f'''
+
+def main():
+    name = st.query_params.get('name', '')
+    query = st.query_params.get('query', '')
+
+    st.title(f"Hello, {name}!")
+    st.write(f"Your search query is - {query}. Please give me more details about your search query:")
+    
+    response = st.text_area("Enter your response:")
+    
+    sw_url = "https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1&Username=501&password=501"
+
+    st.write(f'''
     <a target="_self" href="https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1&Username=501&password=501">
         <button>
             Submit
@@ -17,3 +26,7 @@ st.write(f'''
     ''',
     unsafe_allow_html=True
      )
+
+    
+if __name__ == "__main__":
+    main()
