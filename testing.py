@@ -17,13 +17,16 @@ def main():
     
     sw_url = "https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1&Username=501&password=501"
 
-    html_code = """
-    <script type="text/javascript">
-    alert('You can now close this tab.');
-    </script>
-    """
-    # Inject JavaScript into the Streamlit app
-    components.html(html_code)
+    st.write(f'''
+    <a target="_self" href="https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1&Username=501&password=501">
+        <button>
+            Submit
+        </button>
+    </a>
+    ''',
+    unsafe_allow_html=True
+     )
+
 
     
 if __name__ == "__main__":
