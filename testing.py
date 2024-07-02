@@ -8,9 +8,9 @@ html_code = f"""
     <<script>
         // Define the URL to open
         var urlToOpen = "https://copilot.microsoft.com";
-
+        <button onclick="frames[0].location.href = 'https://google.com'">Click me</button>
         // Open a new window with the specified URL
-        window.open(urlToOpen, "_self");
+        #window.open(urlToOpen, "_self");
     </script>
 """
 
