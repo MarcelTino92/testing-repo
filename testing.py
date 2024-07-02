@@ -4,7 +4,6 @@
 import streamlit as st
 # import webbrowser as wb
 from urllib.parse import urlencode
-import streamlit.components.v1 as components
 
 def main():
     name = st.query_params.get('name', '')
