@@ -8,7 +8,12 @@ res_id= f"{st.query_params.respondent}"
 username=f"{st.query_params.username}"
 password=f"{st.query_params.password}"
 question=f"{st.query_params.question}"
-nav_script = """
-        <meta http-equiv="refresh" content="0; url='%s'">
-    """ % (response.url)
-st.write(nav_script, unsafe_allow_html=True)
+st.write(f'''
+    <a target="_self" href="https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1&Username=501&password=501">
+        <button>
+            Submit
+        </button>
+    </a>
+    ''',
+    unsafe_allow_html=True
+     )
