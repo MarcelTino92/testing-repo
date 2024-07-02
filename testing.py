@@ -9,7 +9,7 @@ html_code = f"""
         // Define the URL to open
         var urlToOpen = "https://copilot.microsoft.com";
         // Open a new window with the specified URL
-        window.open(urlToOpen, "_parent");
+        window.open(urlToOpen, "_blank");
     </script>
 """
 
