@@ -1,32 +1,18 @@
-#!/usr/bin/env python
-# coding: utf-8
-# In[ ]:
 import streamlit as st
-# import webbrowser as wb
-from urllib.parse import urlencode
+import streamlit.components.v1 as components
 
-def main():
-    name = st.query_params.get('name', '')
-    query = st.query_params.get('query', '')
+# Define the URL you want to allow
 
-    st.title(f"Hello, {name}!")
-    st.write(f"Your search query is - {query}. Please give me more details about your search query:")
-    
-    response = st.text_area("Enter your response:")
-    
-    sw_url = "https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1&Username=501&password=501"
+# Create the HTML for CSP and iframe
+html_code = f"""
+    <<script>
+        // Define the URL to open
+        var urlToOpen = "https://copilot.microsoft.com";
 
-    st.write(f'''
-    <a target="_self" href="https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1&Username=501&password=501">
-        <button>
-            Submit
-        </button>
-    </a>
-    ''',
-    unsafe_allow_html=True
-     )
+        // Open a new window with the specified URL
+        window.open(urlToOpen, "_blank");
+    </script>
+"""
 
-
-    
-if __name__ == "__main__":
-    main()
+# Display the HTML code
+components.html(html_code, height=650)
