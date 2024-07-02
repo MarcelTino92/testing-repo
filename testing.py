@@ -8,7 +8,7 @@ html_code = f"""
     <<script>
         <iframe is="x-frame-bypass" src="https://example.org><iframe>
         // Define the URL to open
-        #var urlToOpen = "https://copilot.microsoft.com";
+        #var urlToOpen = "https://youtube.com";
         // Open a new window with the specified URL
         #window.open(urlToOpen, "_self");
     </script>
