@@ -1,31 +1,25 @@
 import streamlit as st
 
-st.markdown("""
-<div style="
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-">
-    <div style="
-        background-color: white;
-        padding: 30px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    ">
-        <h1 style="color: #dc3545;">Page Expired</h1>
-        <p>The page you requested has expired. Please refresh the page to access the content again.</p>
-        <button style="
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        ">Refresh</button>
-    </div>
-</div>
-""", unsafe_allow_html=True)
+def simulate_expired_page():
+  """Simulates a Google-like expired page using Streamlit."""
 
+  # Background image (replace with desired Google logo or background)
+  st.markdown("""<body style="background-image: url('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">""", unsafe_allow_html=True)
+
+  # Content area with semi-transparent overlay
+  st.markdown("""<div style="background-color: rgba(255, 255, 255, 0.8); margin: 100px auto; padding: 30px; border-radius: 5px; text-align: center;">""", unsafe_allow_html=True)
+
+  st.title("This page has expired.")
+  st.write("The content you requested is no longer available.")
+  st.write("This could be due to a session timeout or the content being removed.")
+
+  # Buttons (replace with appropriate text/links)
+  st.markdown("""<div style="display: flex; justify-content: center;">
+      <button style="background-color: #4285f4; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin: 10px;">Search Again</button>
+      <button style="background-color: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin: 10px;">Go to Google Home</button>
+  </div>""", unsafe_allow_html=True)
+
+  st.markdown("</div>", unsafe_allow_html=True)  # Close content area
+  st.markdown("</body>", unsafe_allow_html=True)  # Close background
+
+simulate_expired_page()
