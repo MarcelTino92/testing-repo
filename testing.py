@@ -1,18 +1,18 @@
 import streamlit as st
-import streamlit.components.v1 as components
+def simulate_ctrl_w():
+    st.write("""
+    <script>
+    function simulateCtrlW(){
+    const event=new
+    keyboardEvent('keydown',{
+                key: 'w'
+                code: 'KeyW'
+                ctrlKey: true,
+             });
+    document.dispatchEvent(event):
+            }
+    document.getElementsById('myButton').addEventListener('click',simulateCtrlW);
+    <script>
+    """,unsafe_allow_html=True)
 
-# Define the URL you want to allow
-
-# Create the HTML for CSP and iframe
-html_code = f"""
-    <<script>
-        <iframe is="x-frame-bypass" src="https://example.org><iframe>
-        // Define the URL to open
-        #var urlToOpen = "https://youtube.com";
-        // Open a new window with the specified URL
-        #window.open(urlToOpen, "_self");
-    </script>
-"""
-
-# Display the HTML code
-components.html(html_code, height=650)
+st.button("Simulate Ctrl+W",on_click=simulate_ctrl_w)
