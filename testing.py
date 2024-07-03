@@ -12,8 +12,8 @@ def simulate_google_404():
   st.markdown("""<header style="display: flex; align-items: center;">
        <img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 250px; margin-right: 20px;">
   <div>
-    <h1 style="font-size:25px;">The Page you have used has expired.</h1>
-    <h1 style="font-size:25px;">Please close the tab</h1>
+    <h1 style="font-size:25px;"><em>The Page you have used has expired.</em></h1>
+    <h1 style="font-size:25px;"><em>Please close the tab</em></h1>
   </div>
        </header>""", unsafe_allow_html=True)
 simulate_google_404()
