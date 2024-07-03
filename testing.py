@@ -8,14 +8,13 @@ def simulate_google_404():
 
   # Header and robot image
   st.markdown("""<header style="display: flex; justify-content: center; margin: 50px 0;">
-      <img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 300px;">
+      <img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 250px;">
       <h1>The Page you have used has expired.</h1>
-      <p> Please close the tab </p>
   </header>""", unsafe_allow_html=True)
 
   # Message
-  st.markdown("""<p style="text-align: center; font-size: 16px;">The requested URL /<span style="color: #607D8B;">your_url_here</span> was not found on this server. That's all we know.</p>""", unsafe_allow_html=True)
-
+  st.markdown("""<p style="text-align: center; font-size: 16px;">Please close the tab</p>""", unsafe_allow_html=True)
+  #st.markdown("""<p style="text-align: center; font-size: 16px;">The requested URL /<span style="color: #607D8B;">your_url_here</span> was not found on this server. That's all we know.</p>""", unsafe_allow_html=True)
   # Search bar (optional, comment out if not desired)
   # st.markdown("""<div style="display: flex; justify-content: center; margin: 20px 0;">
   #     <input type="text" placeholder="Search Google web" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 300px;">
