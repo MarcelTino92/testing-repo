@@ -1,24 +1,26 @@
 import streamlit as st
 
-def simulate_404_page():
-  """Simulates a Google-like 404 error page using Streamlit."""
+def simulate_google_404():
+  """Simulates a Google 404 error page with robot using Streamlit."""
 
-  # Background image (replace with desired Google logo or background)
-  st.markdown("""<body style="background-image: url('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">""", unsafe_allow_html=True)
+  # Background color
+  st.markdown("""<body style="background-color: #f5f5f5; font-family: Arial, sans-serif;">""", unsafe_allow_html=True)
 
-  # Content area with semi-transparent overlay
-  st.markdown("""<div style="background-color: rgba(255, 255, 255, 0.8); margin: 100px auto; padding: 30px; border-radius: 5px; text-align: center;">""", unsafe_allow_html=True)
+  # Header and robot image
+  st.markdown("""<header style="display: flex; justify-content: center; margin: 50px 0;">
+      <img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 100px;">
+      <h1>404. That's an error.</h1>
+  </header>""", unsafe_allow_html=True)
 
-  st.title("404. That's not a thing here.")
-  st.write("The page you requested could not be found. It might be missing or temporarily unavailable.")
+  # Message
+  st.markdown("""<p style="text-align: center; font-size: 16px;">The requested URL /<span style="color: #607D8B;">your_url_here</span> was not found on this server. That's all we know.</p>""", unsafe_allow_html=True)
 
-  # Search bar (optional)
-  # st.markdown("""<div style="display: flex; justify-content: center;">
-  #     <input type="text" style="padding: 10px 20px; border: 1px solid #ccc; border-radius: 5px; margin: 10px;">
-  #     <button style="background-color: #4285f4; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Search</button>
+  # Search bar (optional, comment out if not desired)
+  # st.markdown("""<div style="display: flex; justify-content: center; margin: 20px 0;">
+  #     <input type="text" placeholder="Search Google web" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 300px;">
+  #     <button style="background-color: #4285f4; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Search</button>
   # </div>""", unsafe_allow_html=True)
 
-  st.markdown("</div>", unsafe_allow_html=True)  # Close content area
-  st.markdown("</body>", unsafe_allow_html=True)  # Close background
+  st.markdown("</body>", unsafe_allow_html=True)
 
-simulate_404_page()
+simulate_google_404()
