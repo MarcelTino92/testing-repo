@@ -9,7 +9,7 @@ def simulate_google_404():
   # Header and robot image
   st.markdown("""<header style="display: flex; justify-content: center; margin: 50px 0;">
       <img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 250px;">
-      <h1 style="font-size:20px;">The Page you have used has expired.</h1>
+      <h1 style="font-size:25px;">The Page you have used has expired.</h1>
   </header>""", unsafe_allow_html=True)
 
   # Message
