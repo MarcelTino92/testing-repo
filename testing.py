@@ -13,7 +13,6 @@ def simulate_google_404():
       <h1 style="font-size:25px;">The Page you have used has expired.</h1>
       <h1 style="font-size:25px;">Please close the tab</h1>
       </div>
-<hr />
   </header>""", unsafe_allow_html=True)
 
   # Message
