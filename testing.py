@@ -7,13 +7,22 @@ def simulate_google_404():
   st.markdown("""<body style="background-color: #f5f5f5; font-family: Arial, sans-serif;">""", unsafe_allow_html=True)
 
   # Header and robot image
-  st.markdown("""<header style="display: flex; justify-content: center; margin: 50px 0;">
-      <div style="clear: both">
-      <img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 250px;">
-      <h1 style="font-size:25px;">The Page you have used has expired.</h1>
-      <h1 style="font-size:25px;">Please close the tab</h1>
-      </div>
-  </header>""", unsafe_allow_html=True)
+  #st.markdown("""<header style="display: flex; justify-content: center; margin: 50px 0;">
+      #<div style="clear: both">
+      #<img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 250px;">
+      #<h1 style="font-size:25px;">The Page you have used has expired.</h1>
+      #<h1 style="font-size:25px;">Please close the tab</h1>
+     # </div>
+  #</header>""", unsafe_allow_html=True)
+
+  # Header and robot image
+st.markdown("""<header style="display: flex; align-items: center;">
+  <img src="https://www.google.com/images/errors/robot.png" alt="Sad robot" style="height: 250px; margin-right: 20px;">
+  <div>
+    <h1 style="font-size:25px;">The Page you have used has expired.</h1>
+    <h1 style="font-size:25px;">Please close the tab</h1>
+  </div>
+</header>""", unsafe_allow_html=True)
 
   # Message
   st.markdown("""<p style="text-align: center; font-size: 16px;">Please close the tab</p>""", unsafe_allow_html=True)
