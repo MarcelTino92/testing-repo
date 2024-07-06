@@ -23,6 +23,12 @@ import streamlit as st
 #components.iframe(url, height=1200)
 
 #st.iframe(url, allowfullscreen=True)
+
+import requests
+data = {"username": 893, "password": 893}
+url = f"http://programmingtraining.sawtoothsoftware.com/CTDEMOCHI_V1/cgi-bin/ciwweb.pl?studyname=CTDEMOCHI_V1&sys_skipto=D1PostText&transaction_id=5&CT-1&hid_pagenum=1&hid_link=1&hid_javascript=1&hid_screenwidth=1488"
+response = requests.get(url, params=data)
+
 import streamlit as st
 import requests
 
@@ -30,14 +36,6 @@ url = f"https://www.google.com/search?igu=1&ei=&q="
 
 nav_script = """
         <meta http-equiv="refresh" content="0; url='%s'">
-    """ % (url)
-st.write(nav_script, unsafe_allow_html=True)
-import requests
-data = {"username": 893, "password": 893}
-url = f"http://programmingtraining.sawtoothsoftware.com/CTDEMOCHI_V1/cgi-bin/ciwweb.pl?studyname=CTDEMOCHI_V1&sys_skipto=D1PostText&transaction_id=5&CT-1&hid_pagenum=1&hid_link=1&hid_javascript=1&hid_screenwidth=1488"
-response = requests.get(url, params=data)
-nav_script = """
-          <meta http-equiv="refresh" content="0; url='%s'">
-      """ % (response.url)
+    """ % (response.url)
 st.write(nav_script, unsafe_allow_html=True)
 
