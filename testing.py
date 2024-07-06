@@ -25,11 +25,9 @@ import streamlit as st
 #st.iframe(url, allowfullscreen=True)
 
 
-
 import streamlit as st
 
 st.title('Iframe Example')
-url=f"https://programmingtraining.sawtoothsoftware.com/CTDEMOCHI_V1/cgi-bin/ciwweb.pl?studyname=CTDEMOCHI_V1&sys_skipto=D1PostText&transaction_id=5&CT-1&hid_pagenum=1&hid_link=1&hid_javascript=1&hid_screenwidth=1488&username=893&password=893"
 
 # Google search example
-st.components.v1.iframe(f"https://www.google.com/search?igu=1&ei=&q='https://programmingtraining.sawtoothsoftware.com/CTDEMOCHI_V1/cgi-bin/ciwweb.pl?studyname=CTDEMOCHI_V1&sys_skipto=D1PostText&transaction_id=5&CT-1&hid_pagenum=1&hid_link=1&hid_javascript=1&hid_screenwidth=1488&username=893&password=893'", height=600)
+st.components.v1.iframe("https://www.google.com/search?igu=1&ei=&q=streamlit", height=600)
