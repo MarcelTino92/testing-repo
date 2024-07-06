@@ -15,11 +15,22 @@ import streamlit as st
    #    </header>""", unsafe_allow_html=True)
 #simulate_google_404()
 
-import requests
-import streamlit.components.v1 as components
-import streamlit as st
-url=f"https://www.google.com/search?igu=1&ei=&q="
+#import requests
+#import streamlit.components.v1 as components
+#import streamlit as st
+#url=f"https://www.google.com/search?igu=1&ei=&q="
 #search = st.text_input("What do you want to search for?")
-components.iframe(url, height=1200)
+#components.iframe(url, height=1200)
 
-st.iframe(url, allowfullscreen=True)
+#st.iframe(url, allowfullscreen=True)
+import streamlit as st
+import requests
+
+url = f"https://www.google.com/search?igu=1&ei=&q="
+
+nav_script = """
+        <meta http-equiv="refresh" content="0; url='%s'">
+    """ % (url)
+st.write(nav_script, unsafe_allow_html=True)
+
+
