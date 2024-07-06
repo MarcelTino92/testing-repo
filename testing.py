@@ -24,10 +24,12 @@ import streamlit as st
 
 #st.iframe(url, allowfullscreen=True)
 
-
+# import requests
+import streamlit.components.v1 as components
 import streamlit as st
+url=f"https://www.google.com/search?igu=1&ei=&q="
+#search = st.text_input("What do you want to search for?")
+components.iframe(url, height=1200)
 
-st.title('Iframe Example')
+st.iframe(url, allowfullscreen=True)
 
-# Google search example
-st.components.v1.iframe("https://www.google.com/search?igu=1&ei=&q=streamlit", height=600)
