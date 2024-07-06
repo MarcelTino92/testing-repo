@@ -10,7 +10,11 @@ data = {"username": 893, "password": 893,"question":"How are you"}
 url = f"https://programmingtraining.sawtoothsoftware.com/CBV1/cgi-bin/ciwweb.pl?studyname=ChatBot_CBV1"
 response = requests.get(url, params=data)
 st.write(response.url)
-js1=f"window.parent.location.href = {response.url},true;"
+js1=f"
+document.title="Market Research Study";	
+</script>
+window.parent.location.href = {response.url},true;"
 st_javascript(js1)
+</script>
 #js=f'window.open("{response.url}","_blank").then(r=> window.parent.location.href);'
 #st_javascript(js)
